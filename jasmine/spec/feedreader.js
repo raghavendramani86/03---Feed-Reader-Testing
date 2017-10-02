@@ -88,7 +88,7 @@ $(function() {
             // on click of menuIcon
             menuIcon.trigger('click');
             expect(body.classList.value).toBe('menu-hidden');
-          })
+          });
         });
 
     /* TODO: Write a new test suite named "Initial Entries" */
@@ -102,7 +102,7 @@ $(function() {
        beforeEach(function(done) {
          loadFeed(0,function() {
            done();
-         })
+         });
        });
        it('contains atleast one article with a class attribute = entry', function(done) {
          expect($('.feed').children()[0].children[0].className).toBe('entry');
@@ -119,14 +119,12 @@ $(function() {
        * Remember, loadFeed() is asynchronous.
        */
        beforeEach(function(done) {
-        //  loadFeed(0, function() {
            //  store old feed data for comparison
            oldFeedInfo = $('.feed').children()[0];
            //  load new feed
            loadFeed(3, function() {
              done();
            });
-        //  });
        });
 
       it('changes content from the previous feed selection', function() {

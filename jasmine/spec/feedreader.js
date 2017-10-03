@@ -54,8 +54,8 @@ $(function() {
     * menu-icon and checking the class assigned to the body
     * element when this event is triggered
     */
-    it('is shown on first click of the menu icon\
-    and hidden on the next click of the menu icon', function() {
+    it('is shown on first click of the menu icon '+
+    'and hidden on the next click of the menu icon', function() {
       // on click of menuIcon
       menuIcon.trigger('click');
       expect(body.hasClass('menu-hidden')).toBe(false);
